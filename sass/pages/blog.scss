@@ -1,0 +1,222 @@
+@import "../heplers/variables";
+@import "../heplers/mixins";
+@import "../layout/header";
+@import "../layout/footer";
+
+html {
+  ::selection {
+    background: #fefe32;
+  }
+
+  body {
+    color: $black;
+    font-size: 212%;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+    font-family: "freight-text-pro", freightText, Georgia, serif;
+    @extend %transition;
+
+    a {
+      color:$black;
+      text-decoration: underline;
+    }
+
+    p {
+      margin-bottom: 1.00em;
+      margin-top: 0;
+      line-height: 1.428572em;
+      text-align: left;
+    }
+
+    header {
+      height: 210px;
+      background-position: center center;
+      text-align: center;
+      position: relative;
+      top: 0;
+
+      .container {
+        width: 84%;
+        overflow: hidden !important;
+        max-width: 1320px;
+
+        h1 {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-size: 3.238095em;
+          letter-spacing: -0.025em;
+          text-align: center;
+          font-weight: 500;
+          color: #393939;
+          line-height: 1.4em;
+          padding: 0;
+          margin: 0;
+          margin-top:7%;
+        }
+      }
+    }
+    .container {
+      @extend %auto;
+      width: 84%;
+      overflow: hidden !important;
+      max-width: 1320px;
+
+      @media screen and (min-width: 700px) {
+        p {
+          width: 580px !important;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      a:hover {
+        color: #0fb7b7;
+        text-decoration: underline;
+      }
+
+      .p {
+        @extend %auto;
+        margin-top: 6%;
+        margin-bottom: 2.70em;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .flex {
+          display: flex;
+          flex-direction: column !important;
+          display: -webkit-box;
+          display: -webkit-flex;
+          .colum2 {
+            margin-right: 0% !important;
+            width:100% !important;
+          }
+        }
+      }
+
+      .flex {
+        background: #222;
+        margin-top:5%;
+        display: flex;
+        flex-direction: row;
+        display: -webkit-box;
+        display: -webkit-flex;
+        line-height: 0;
+
+        .colum2 {
+          flex-direction: column !important;
+          margin-bottom: 0;
+          opacity: 0.8;
+          width: 50%;
+
+          a {
+            background: #222;
+            display: block;
+            position: relative;
+
+            span {
+              font-family: "Brandon";
+              position: absolute;
+              width: 100%;
+              text-align: center;
+              top: 50%;
+              margin-top: -20px;
+              display: inherit;
+              color: #fff;
+              font-weight: 500;
+              font-size: 250.25%;
+              -webkit-font-smoothing: antialiased;
+            }
+
+            img {
+              border: none;
+            }
+          }
+
+          .sub {
+            font-size: 0.75em;
+            margin-top: 20px;
+            font-weight: 400;
+          }
+        }
+
+        a:hover img {
+          opacity: 0.5;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  header {
+    height: 300px !important;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  header {
+    height: 185px !important;
+  }
+
+  h1 {
+    margin-top:9% !important;
+    font-size: 3.538095em !important;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  h1 {
+    margin-top:12% !important;
+    font-size: 3.538095em !important;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  h1 {
+    margin-top:25% !important;
+    font-size: 2.838095em !important;
+  }
+  .container {
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      width: 295px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .container {
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      width: 255px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 321px) {
+  header {
+    height: 185px !important;
+  }
+  h1 {
+    margin-top:30% !important;
+    font-size: 2.838095em !important;
+  }
+  .container {
+    p {
+      margin-left: auto;
+      margin-right: auto;
+      width: 213px !important;
+    }
+  }
+}
+
+
